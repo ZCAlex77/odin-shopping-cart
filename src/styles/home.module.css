@@ -1,0 +1,64 @@
+.home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+
+.home > div {
+  place-self: center;
+}
+
+.desc :is(h1, p) {
+  padding-left: 15px;
+}
+
+.desc h1 {
+  background: hsl(180, 80%, 30%);
+  color: #fff;
+  font-size: 3rem;
+  box-shadow: 10px 10px 0 hsl(180, 80%, 40%);
+}
+
+.desc p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-indent: 15px;
+}
+
+.desc a {
+  box-shadow: 5px 5px 0 hsl(180, 80%, 40%);
+  text-decoration: none;
+  border: 2px solid hsl(180, 80%, 30%);
+  font-size: 1.4rem;
+  padding: 5px 10px;
+  transition: background 0.2s, color 0.2s;
+  margin-left: 15px;
+}
+
+.desc a:hover {
+  background: hsl(180, 80%, 30%);
+  color: #fff;
+}
+
+.logoContainer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.logoContainer::before {
+  content: '';
+  position: absolute;
+  background: hsl(180, 80%, 30%);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.logoContainer img {
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

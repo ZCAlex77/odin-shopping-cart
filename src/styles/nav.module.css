@@ -6,12 +6,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 100px;
-  background-color: hsl(0, 100%, 27%);
+  background-color: hsl(180, 80%, 30%);
   color: #fff;
 }
 
 .logo {
   flex-basis: 100%;
+  font-weight: bold;
 }
 
 .links {

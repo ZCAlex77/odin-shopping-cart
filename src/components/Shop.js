@@ -3,7 +3,7 @@ import Card from './Card';
 import items from '../items';
 import shopStyles from '../styles/shop.module.css';
 
-const Shop = () => {
+const Shop = ({ addToCart }) => {
   return (
     <section className={shopStyles.shop}>
       {items.map((item) => (
@@ -12,6 +12,7 @@ const Shop = () => {
           name={item.name}
           price={item.price}
           image={item.color}
+          addToCart={addToCart}
         />
       ))}
     </section>

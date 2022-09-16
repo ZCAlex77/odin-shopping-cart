@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import cardStyles from '../styles/card.module.css';
 
-const Card = ({ name, price, image }) => {
+const Card = ({ name, price, image, addToCart }) => {
   const [quantity, setQuantity] = useState(1);
 
   const handleChange = (ev) => {
     if (ev.target.valueAsNumber > 0 && ev.target.valueAsNumber < 1000)
       setQuantity(ev.target.valueAsNumber);
+  };
+
+  const handleClick = () => {
+    addToCart(name, quantity);
+    setQuantity(1);
   };
 
   return (
@@ -28,7 +33,7 @@ const Card = ({ name, price, image }) => {
             placeholder="0"
           />
         </div>
-        <button>Add to cart</button>
+        <button onClick={handleClick}>Add to cart</button>
       </div>
     </div>
   );

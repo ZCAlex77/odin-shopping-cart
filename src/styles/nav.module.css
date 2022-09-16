@@ -32,11 +32,16 @@ nav {
   border: none;
   font-size: inherit;
   flex-basis: min-content;
+  position: relative;
 }
 
 .cart svg {
   width: 2rem;
   height: auto;
+}
+
+nav span {
+  margin-right: 5px;
 }
 
 .links > a {

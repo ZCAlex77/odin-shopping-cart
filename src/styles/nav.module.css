@@ -32,6 +32,17 @@ nav {
   flex-basis: min-content;
 }
 
-:is(.links > *, .cart):hover {
-  text-decoration: underline;
+.cart svg {
+  width: 2rem;
+  height: auto;
+}
+
+.links > a {
+  box-sizing: content-box;
+  position: relative;
+}
+
+.links > a:hover,
+.activeLink {
+  box-shadow: 0 3px 1px -1px #fff;
 }

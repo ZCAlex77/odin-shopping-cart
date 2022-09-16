@@ -1,11 +1,12 @@
 .home {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 160px);
 }
 
 .home > div {
-  place-self: center;
+  flex-basis: 40%;
 }
 
 .desc :is(h1, p) {

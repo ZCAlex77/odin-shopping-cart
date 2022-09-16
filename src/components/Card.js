@@ -10,7 +10,7 @@ const Card = ({ name, price, image, addToCart }) => {
   };
 
   const handleClick = () => {
-    addToCart(name, quantity);
+    addToCart(name, price, quantity);
     setQuantity(1);
   };
 

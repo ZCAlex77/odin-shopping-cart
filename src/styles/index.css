@@ -16,6 +16,8 @@ body {
   background: hsl(170, 100%, 95%);
   width: 100vw;
   min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 }
 
 #root {

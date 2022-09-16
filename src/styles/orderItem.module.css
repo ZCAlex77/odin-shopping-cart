@@ -1,0 +1,27 @@
+.orderItem {
+  display: grid;
+  grid-template-columns: min-content 2fr min-content min-content;
+  padding: 5px;
+  background: hsl(180, 80%, 20%);
+  color: #fff;
+  gap: 4px;
+}
+
+.quantity {
+  color: #000;
+}
+
+.orderItem p {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.delete {
+  background: none;
+  border: 0;
+  font-weight: bold;
+  border-left: 1px solid #fff;
+  padding: 0 5px;
+}

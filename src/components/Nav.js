@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import navStyles from '../styles/nav.module.css';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
-const Nav = () => {
+const Nav = ({ toggleCart }) => {
   const [activeLink, setActiveLink] = useState(0);
 
   return (
@@ -25,7 +25,7 @@ const Nav = () => {
           Shop
         </NavLink>
       </div>
-      <button className={navStyles.cart}>
+      <button onClick={toggleCart} className={navStyles.cart}>
         <ShoppingBasketIcon />
       </button>
     </nav>

@@ -1,9 +1,8 @@
 import React from 'react';
 import Card from './Card';
-import items from '../items';
 import shopStyles from '../styles/shop.module.css';
 
-const Shop = ({ addToCart }) => {
+const Shop = ({ addToCart, items }) => {
   return (
     <section className={shopStyles.shop}>
       {items.map((item) => (

@@ -5,6 +5,8 @@ import Home from './components/Home';
 import Cart from './components/Cart';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import items from './items';
+
 function App() {
   const [cart, setCart] = useState([]);
   const [numOfItems, setNumOfItems] = useState(0);
@@ -43,7 +45,10 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/shop" element={<Shop addToCart={addToCart} />} />
+            <Route
+              path="/shop"
+              element={<Shop addToCart={addToCart} items={items} />}
+            />
           </Routes>
         </main>
         <Cart

@@ -27,7 +27,10 @@ const Cart = ({ isOpen, order, updateCart, deleteFromCart }) => {
         ))}
       </div>
       <div className={cartStyles.checkoutContainer}>
-        <p>Total: {getTotal()}$</p>
+        <p data-testid="total">
+          Total: {getTotal()}
+          {'\u20ac'}
+        </p>
         <button>Checkout</button>
       </div>
     </div>

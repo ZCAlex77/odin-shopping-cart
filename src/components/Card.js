@@ -22,15 +22,17 @@ const Card = ({ name, price, image, addToCart }) => {
       <p className={cardStyles.productName}>{name}</p>
       <div className={cardStyles.order}>
         <div className={cardStyles.quantity}>
-          <span>Quantity:</span>
+          <label htmlFor="quantity">Quantity:</label>
           <input
             style={{ width: `${String(quantity).length + 2}ch` }}
             type="number"
-            min="0"
+            min="1"
             max="1000"
             value={quantity}
+            id="quantity"
+            data-testid="quantity"
             onChange={handleChange}
-            placeholder="0"
+            placeholder="1"
           />
         </div>
         <button onClick={handleClick}>Add to cart</button>

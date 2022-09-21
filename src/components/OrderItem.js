@@ -20,7 +20,10 @@ const OrderItem = ({ index, item, updateCart, deleteFromCart }) => {
         onChange={handleChange}
       />
       <p>{item.name}</p>
-      <p>{item.price * item.quantity}$</p>
+      <p>
+        {item.price * item.quantity}
+        {'\u20ac'}
+      </p>
       <button
         onClick={() => deleteFromCart(index)}
         className={orderItemStyles.delete}
